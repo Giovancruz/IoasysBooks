@@ -1,0 +1,100 @@
+body {
+  background-image: url("../static/images/background-login.jpg");
+  background-size: cover;
+  background-position: center top;
+}
+
+.logo {
+  font-size: 28px;
+  line-height: 40px;
+  color: #ffffff;
+  margin-bottom: 50px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+.logo svg {
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.logo svg path {
+  fill: #fff;
+}
+
+.wrapper {
+  width: 360px;
+}
+
+.form-container .form-group {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.form-container .form-group label {
+  display: inline-block;
+  z-index: 1;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-left: 15px;
+  padding-top: 10px;
+  position: absolute;
+}
+
+.form-container .form-control {
+  height: 60px;
+  backdrop-filter: blur(2px);
+  border: none;
+  background: rgba(0, 0, 0, 0.32);
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.5;
+  padding: 28px 15px 8px;
+  width: 100%;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  outline: none;
+}
+
+.form-container .form-control-feedback {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  line-height: 20px;
+  min-height: 35px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  padding: 0 15px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+
+  font-family: Heebo;
+  font-style: normal;
+}
+
+.btn-light {
+  background: #ffffff;
+  color: #b22e6f;
+}
+
+.btn-rounded {
+  border-radius: 44px;
+}
