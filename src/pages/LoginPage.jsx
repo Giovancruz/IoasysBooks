@@ -13,7 +13,7 @@ const LoginPage = (props) => {
       <section id="Login" className="container mx-auto">
         <div className="wrapper flex flex-col max-w-full h-screen">
           <div className="form-container my-auto">
-            <Logo />
+          <Logo componentClass="mb-10" />
           <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="userEmail">Email</label>

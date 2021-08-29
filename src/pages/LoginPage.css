@@ -44,25 +44,6 @@ body {
   background-position: center top;
 }
 
-.logo {
-  font-size: 28px;
-  line-height: 40px;
-  color: #ffffff;
-  margin-bottom: 50px;
-  font-weight: 300;
-  letter-spacing: 1.5px;
-}
-
-.logo svg {
-  margin-right: 15px;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.logo svg path {
-  fill: #fff;
-}
-
 .wrapper {
   width: 360px;
 }
