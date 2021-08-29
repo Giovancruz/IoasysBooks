@@ -3,9 +3,13 @@ import Logo from "../components/Logo";
 import "./LoginPage.css";
 
 const LoginPage = (props) => {
+  const [userEmail, setEmail] = useState("");
+  const [userPass, setPassword] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (validLoginForm()) {
   }
   };
 
@@ -24,6 +28,7 @@ const LoginPage = (props) => {
                   defaultValue="{email}"
                   required="required"
                   title="Digite seu email"
+                onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="form-group relative">
@@ -34,6 +39,7 @@ const LoginPage = (props) => {
                   className="form-control"
                   required="required"
                   title="Digite sua senha"
+                onChange={(e) => setPassword(e.target.value)}
                 />
                 <div className="form-control-feedback">
                   <button className="btn btn-rounded btn-light" type="submit">

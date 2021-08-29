@@ -2,12 +2,16 @@ import React from "react";
 import "./HomePage.css";
 
 import Header from "../components/Header";
+import BookListItem from "../components/BookListItem";
 
 const HomePage = (props) => {
   return (
-    <section className="container mx-auto">
+    <div className="container mx-auto">
       <Header />
-    </section>
+      <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <BookListItem />
+      </section>
+    </div>
   );
 };
 
