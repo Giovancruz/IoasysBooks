@@ -6,12 +6,17 @@ const LoginPage = lazy(() => import("../pages/LoginPage"));
 const HomePage = lazy(() => import("../pages/HomePage"));
 
 const Router = (props) => {
+  const userHasAuthenticated = false;
+
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Switch>
-          <Route exact path="/" component={LoginPage}></Route>
-          <Route exact path="/books" component={HomePage}></Route>
+          {userHasAuthenticated ? (
+            <Route exact path="/" component={HomePage}></Route>
+          ) : (
+            <Route exact path="/" component={LoginPage}></Route>
+          )}
         </Switch>
       </Suspense>
     </BrowserRouter>
