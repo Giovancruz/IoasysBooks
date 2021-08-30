@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useAppContext } from "../components/context";
+import { useAppContext } from "components/Common/context";
 
 const api = axios.create({
   baseURL: "https://books.ioasys.com.br/api/v1",

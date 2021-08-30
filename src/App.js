@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Router from "./components/Router";
-import { AppContext } from "./components/context";
-import { api } from "./services/api";
+import Router from "routes/Router";
+import { AppContext } from "components/Common/context";
+import { api } from "services/api";
 
 
 

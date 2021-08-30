@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as LogoSvg } from "../static/images/Logo.svg";
+import { ReactComponent as LogoSvg } from "static/images/Logo.svg";
 import './Logo.css';
 
 const Logo = ({

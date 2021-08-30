@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Loading from "../components/Loading";
+import Loading from "components/Common/Loading";
 
-const LoginPage = lazy(() => import("../pages/LoginPage"));
-const HomePage = lazy(() => import("../pages/HomePage"));
+const LoginPage = lazy(() => import("pages/LoginPage"));
+const HomePage = lazy(() => import("pages/HomePage"));
 
 const Router = (props) => {
   const userHasAuthenticated = false;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Logo from "../components/Logo";
-import { SignIn } from "../services/api";
+import Logo from "components/Common/Logo";
+import { SignIn } from "services/api";
 
-import "./LoginPage.css";
+import "./styles.css";
 
 const LoginPage = (props) => {
   const [userEmail, setEmail] = useState("");

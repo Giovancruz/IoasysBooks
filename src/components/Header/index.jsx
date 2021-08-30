@@ -1,7 +1,7 @@
-import Logo from "./Logo";
-import { ReactComponent as Arrow } from "../static/images/logout.svg";
+import Logo from "components/Common/Logo";
+import { ReactComponent as Arrow } from "static/images/logout.svg";
 
-import "./Header.css";
+import "./styles.css";
 
 const Header = ({ userName = "Anonymous" }) => {
 

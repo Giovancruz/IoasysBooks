@@ -39,7 +39,7 @@ body {
     rgba(186, 30, 125, 1) 70%,
     rgba(128, 0, 128, 1) 100%
   );
-  background-image: url("../static/images/background-login.jpg");
+  background-image: url("static/images/background-login.jpg");
   background-size: cover;
   background-position: center top;
 }

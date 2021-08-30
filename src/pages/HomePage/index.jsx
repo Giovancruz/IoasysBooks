@@ -1,8 +1,8 @@
 import React from "react";
-import "./HomePage.css";
+import "./styles.css";
 
-import Header from "../components/Header";
-import BookListItem from "../components/BookListItem";
+import Header from "components/Header";
+import BookListItem from "components/Books";
 
 const HomePage = (props) => {
   return (
