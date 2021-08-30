@@ -68,7 +68,7 @@ body {
   height: 60px;
   backdrop-filter: blur(2px);
   border: none;
-  background: rgba(0, 0, 0, 0.32);
+  background-color: rgba(0, 0, 0, 0.32);
   color: #fff;
   font-size: 1em;
   line-height: 1.5;
@@ -78,6 +78,12 @@ body {
   -webkit-appearance: none;
   -moz-appearance: textfield;
   outline: none;
+}
+
+.form-container .form-control:-internal-autofill-selected {
+    background-color: rgba(0, 0, 0, 0.32) !important;
+    background-image: none !important;
+    color: #FFF;
 }
 
 .form-container .form-control-feedback {
@@ -130,7 +136,6 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
-  width: 240px;
   color: rgb(255, 255, 255);
 }
 

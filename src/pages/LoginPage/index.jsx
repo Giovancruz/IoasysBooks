@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "components/Common/Logo";
-import { SignIn } from "services/api";
+import { useAuthContext } from "contexts/auth";
 
 import "./styles.css";
 
@@ -8,38 +8,38 @@ const LoginPage = (props) => {
   const [userEmail, setEmail] = useState("");
   const [userPass, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const context = useAuthContext();
 
   const validLoginForm = () => {
     return userEmail.length > 0 && userPass.length > 0;
   };
 
-  const handleSubmit = (event) => {
+  async function handleSubmit(event) {
     event.preventDefault();
 
-    if (validLoginForm()) {
-      const credentials = {
-        email: userEmail,
-        password: userPass,
-      };
-        SignIn(credentials).then((xhr) => {
-          if (xhr.request.status === 200) {
-            setError(false);
-
-            
-          } else {
-            setError({
-              error: true,
-              message: xhr.response.data.errors.message,
-            });
-          }
+    try {
+      if (validLoginForm()) {
+        const credentials = {
+          email: userEmail,
+          password: userPass,
+        };
+        const xhr = await context.SignIn(credentials);
+        if (xhr.request.status === 401 || xhr.request.status === 500) {
+          setError({
+            error: true,
+            message: xhr.response.data.errors.message,
+          });
+        }
+      } else {
+        setError({
+          error: true,
+          message: "Revise o preenchimento dos campos.",
         });
-    } else {
-      setError({
-        error: true,
-        message: "Os campos Email e Senha são obrigatórios.",
-      });
+      }
+    } catch (e) {
+      setError(true);
     }
-  };
+  }
 
   return (
     <section id="Login" className="container mx-auto">
@@ -53,8 +53,6 @@ const LoginPage = (props) => {
                 type="email"
                 name="userEmail"
                 className="form-control"
-                defaultValue="{email}"
-                required="required"
                 title="Digite seu email"
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -65,7 +63,6 @@ const LoginPage = (props) => {
                 type="password"
                 name="userPassword"
                 className="form-control"
-                required="required"
                 title="Digite sua senha"
                 onChange={(e) => setPassword(e.target.value)}
               />
